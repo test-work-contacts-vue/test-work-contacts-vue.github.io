@@ -1,12 +1,3078 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>POSTOPLAN</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <h1>Hello World</h1>
+    <header class="page-header">
+      <div class="container">
+        <div class="row no-gutters d-flex align-items-center">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a href="#" class="navbar__logo logo navbar-brand">
+                <img src="img/logo.svg" alt="POSTOPLAN" />
+              </a>
+              <div class="navbar__dropdown dropdown navbar-brand">
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span>EN</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">EN</a>
+                  <a class="dropdown-item" href="#">RU</a>
+                </div>
+              </div>
+              <button
+                class="hamburger navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="hamburger__box">
+                  <span class="hamburger__inner"></span>
+                </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar__wrap">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="functionsDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <span>Функции</span>
+                      </a>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="functionsDropdown"
+                      >
+                        <a class="dropdown-item" href="#">Функции</a>
+                        <a class="dropdown-item" href="#">Функции</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="aboutDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <span>О нас</span>
+                      </a>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="aboutDropdown"
+                      >
+                        <a class="dropdown-item" href="#">О нас</a>
+                        <a class="dropdown-item" href="#">О нас</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span>FAQ</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span>Обновления</span></a>
+                    </li>
+                  </ul>
+                  <a href="#" class="navbar__btn main-btn main-btn--pink"
+                    ><span>Sign up free</span></a
+                  >
+                  <ul class="navbar__social social">
+                    <li>
+                      <a href="#">
+                        <svg
+                          width="30"
+                          height="30"
+                          viewBox="0 0 30 30"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.0001 0C6.71586 0 0 6.74393 0 15.0628C0 22.5239 5.40783 28.7029 12.4984 29.8994V18.2053H8.87992V13.9971H12.4984V10.8941C12.4984 7.29377 14.6882 5.33179 17.8871 5.33179C19.4191 5.33179 20.7357 5.44643 21.1179 5.49692V9.26024L18.8993 9.26132C17.16 9.26132 16.8247 10.0911 16.8247 11.3092V13.9949H20.9748L20.4335 18.2032H16.8247V30C24.2463 29.093 30 22.7565 30 15.0585C30 6.74393 23.2841 0 15.0001 0Z"
+                            fill="#3E89F4"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg
+                          width="30"
+                          height="30"
+                          viewBox="0 0 30 30"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M29.9098 8.81561C29.8368 7.21893 29.5832 6.12854 29.2124 5.17456C28.8359 4.17366 28.2454 3.26706 27.4823 2.5177C26.7332 1.75461 25.8263 1.16386 24.8254 0.787125C23.8712 0.416565 22.7811 0.163193 21.1844 0.0906372C19.5847 0.017395 19.0736 0 15 0C10.9264 0 10.4153 0.017395 8.81561 0.0901794C7.21893 0.163193 6.12877 0.416794 5.17456 0.787582C4.17366 1.16409 3.26706 1.75461 2.5177 2.5177C1.75461 3.26683 1.16386 4.17343 0.787125 5.17433C0.416565 6.12854 0.163193 7.21893 0.0906372 8.81538C0.017395 10.4153 0 10.9261 0 14.9998C0 19.0736 0.017395 19.5847 0.0906372 21.1844C0.163422 22.7808 0.417023 23.8712 0.787811 24.8254C1.16432 25.8261 1.75484 26.7329 2.51793 27.4821C3.26706 28.2452 4.17389 28.8357 5.17479 29.2122C6.12877 29.5832 7.21916 29.8366 8.81584 29.9096C10.4157 29.9826 10.9266 29.9998 15.0002 29.9998C19.0739 29.9998 19.585 29.9826 21.1846 29.9096C22.7813 29.8366 23.8715 29.5832 24.8257 29.2122C26.8405 28.4331 28.4333 26.8403 29.2124 24.8254C29.5834 23.8712 29.8368 22.7808 29.9098 21.1844C29.9826 19.5845 30 19.0736 30 15C30 10.9261 29.9826 10.4153 29.9098 8.81561ZM27.2097 21.0615C27.1431 22.524 26.8987 23.3183 26.6933 23.8467C26.1887 25.155 25.1548 26.1889 23.8465 26.6936C23.318 26.8989 22.5238 27.1433 21.0612 27.2099C19.4799 27.2823 19.0054 27.2974 15 27.2974C10.9943 27.2974 10.5201 27.2823 8.93852 27.2099C7.4762 27.1433 6.68198 26.8989 6.15326 26.6936C5.50186 26.453 4.91249 26.0696 4.42863 25.5714C3.93036 25.0875 3.54698 24.4984 3.30643 23.8467C3.10112 23.3183 2.85667 22.524 2.79007 21.0615C2.71797 19.4799 2.70264 19.0054 2.70264 15.0002C2.70264 10.9948 2.71797 10.5206 2.79007 8.93875C2.8569 7.4762 3.10112 6.68198 3.30643 6.15349C3.54698 5.50186 3.93059 4.91249 4.42863 4.42863C4.91249 3.93036 5.50186 3.54698 6.15349 3.30666C6.68198 3.10112 7.4762 2.8569 8.93875 2.79007C10.5203 2.71797 10.9948 2.70264 15 2.70264C19.005 2.70264 19.4795 2.71797 21.0612 2.7903C22.5238 2.8569 23.3178 3.10135 23.8465 3.30666C24.4979 3.54721 25.0873 3.93059 25.5711 4.42863C26.0694 4.91249 26.4528 5.50186 26.6931 6.15349C26.8987 6.68198 27.1431 7.4762 27.2097 8.93875C27.2818 10.5203 27.2971 10.9948 27.2971 15C27.2971 19.0054 27.282 19.4797 27.2097 21.0615ZM14.9998 7.2971C10.7458 7.2971 7.29725 10.7459 7.29725 14.9999C7.29725 19.2539 10.7458 22.7024 14.9998 22.7024C19.254 22.7024 22.7026 19.2539 22.7026 14.9999C22.7026 10.7459 19.254 7.2971 14.9998 7.2971ZM14.9998 19.9998C12.2386 19.9996 9.99989 17.7611 10.0001 14.9997C10.0001 12.2384 12.2386 9.99973 15 9.99973C17.7615 9.99996 20 12.2384 20 14.9997C20 17.7611 17.7613 19.9998 14.9998 19.9998ZM23.0071 8.79291C24.0011 8.79291 24.807 7.98702 24.807 6.99299C24.807 5.99872 24.0011 5.19283 23.0071 5.19283C22.0128 5.19283 21.207 5.99872 21.207 6.99299C21.207 7.98702 22.0128 8.79291 23.0071 8.79291Z"
+                            fill="#3E89F4"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg
+                          width="30"
+                          height="30"
+                          viewBox="0 0 30 30"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 14.8323C0 6.91708 6.71575 0.500488 15 0.500488C23.2843 0.500488 30 6.91708 30 14.8323C30 22.7475 23.2843 29.1641 15 29.1641C6.71575 29.1641 0 22.7475 0 14.8323ZM10.6003 12.3707H7.201V22.1294H10.6003V12.3707ZM10.8243 9.352C10.8022 8.39517 10.0861 7.6664 8.92313 7.6664C7.76025 7.6664 7 8.39517 7 9.352C7 10.289 7.73781 11.0387 8.879 11.0387H8.90075C10.0861 11.0387 10.8243 10.289 10.8243 9.352ZM22.8596 16.534C22.8596 13.5367 21.1826 12.1416 18.9457 12.1416C17.1409 12.1416 16.3328 13.0887 15.8817 13.7532V12.371H12.4819C12.5267 13.2867 12.4819 22.1296 12.4819 22.1296H15.8817V16.6796C15.8817 16.3879 15.9037 16.097 15.9936 15.8882C16.2393 15.3055 16.7987 14.7022 17.7378 14.7022C18.9684 14.7022 19.4603 15.5971 19.4603 16.9084V22.1294H22.8595L22.8596 16.534Z"
+                            fill="#3E89F4"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg
+                          width="30"
+                          height="25"
+                          viewBox="0 0 30 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.43474 24.1302C20.7561 24.1302 26.9472 14.8474 26.9472 6.79804C26.9472 6.53436 26.9417 6.27182 26.9298 6.01064C28.1314 5.15074 29.176 4.07769 30 2.85626C28.8972 3.34148 27.7103 3.66791 26.4654 3.81537C27.7361 3.06104 28.7119 1.86816 29.1719 0.446029C27.9826 1.14373 26.6656 1.65069 25.2635 1.92456C24.1404 0.740513 22.5412 0 20.7706 0C17.3717 0 14.6152 2.72805 14.6152 6.09083C14.6152 6.56902 14.6693 7.03385 14.7748 7.47988C9.65927 7.22504 5.12306 4.80121 2.08763 1.11519C1.55914 2.0154 1.25427 3.06127 1.25427 4.17714C1.25427 6.2904 2.341 8.15629 3.9933 9.24769C2.98347 9.21688 2.03499 8.94256 1.20575 8.48588C1.20483 8.51148 1.20483 8.5364 1.20483 8.56358C1.20483 11.5139 3.32634 13.9771 6.14296 14.5353C5.62569 14.6746 5.08141 14.7495 4.51996 14.7495C4.12399 14.7495 3.7381 14.711 3.36296 14.6397C4.14665 17.0601 6.41899 18.8214 9.11293 18.8707C7.0063 20.5049 4.35242 21.4783 1.46828 21.4783C0.972061 21.4783 0.481796 21.4502 0 21.394C2.72392 23.1219 5.95871 24.1304 9.43497 24.1304"
+                            fill="#3E89F4"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="navbar__cabinet cabinet">
+                    <a href="#" class="cabinet__login">Войти</a>
+                    <a href="#" class="cabinet__reg main-btn main-btn--blue">
+                      <span>Регистрация</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="promo">
+        <div class="container">
+          <picture>
+            <source media="(max-width: 642px)" srcset="img/promo-mob.svg" />
+            <source media="(max-width: 991px)" srcset="img/promo-tablet.svg" />
+            <img src="img/promo.svg" alt="Social" class="promo__img" />
+          </picture>
+          <div class="row">
+            <div class="col-12 col-sm-9 m-auto">
+              <h1 class="promo__title">
+                <span
+                  >Smart automatic marketing platform in social networks and
+                  messengers</span
+                >
+              </h1>
+              <p class="promo__desc">
+                Allows you to create, schedule posting and promote content.
+                Working with accounts and increasing clients on autopilot.
+              </p>
+              <p class="promo__sub">Unlimited accounts, projects, users.</p>
+              <img
+                src="img/mob-social.svg"
+                alt="Social"
+                class="promo__social"
+              />
+              <a href="" class="main-btn main-btn--pink promo__btn"
+                ><span>Sign up free</span></a
+              >
+              <p class="promo__note">Free forever — no credit card required</p>
+              <div class="rewards">
+                <p class="rewards__title">
+                  POSTOPLAN отмечен наградами и ему доверяют 100,000+
+                  специалистов и компаний из 147 стран
+                </p>
+                <ul class="rewards__list">
+                  <li>
+                    <img
+                      src="img/reward-1.svg"
+                      width="70"
+                      height="80"
+                      alt="Награда"
+                    />
+                  </li>
+                  <li>
+                    <!-- Begin SF Tag -->
+                    <div
+                      style="width: 70px"
+                      class="sf-root"
+                      data-id="3337725"
+                      data-badge="heart-badge-white"
+                      data-metadata=""
+                    >
+                      <a
+                        href="https://sourceforge.net/software/product/POSTOPLAN/"
+                        target="_blank"
+                        >POSTOPLAN Reviews</a
+                      >
+                    </div>
+                    <script type="text/javascript">
+                      (function () {
+                        var sc = document.createElement("script");
+                        sc.type = "text/javascript";
+                        sc.async = true;
+                        sc.src = "https://b.sf-syn.com/badge_js?sf_id=3337725";
+                        var p = document.getElementsByTagName("script")[0];
+                        p.parentNode.insertBefore(sc, p);
+                      })();
+                    </script>
+                    <!-- End SF Tag -->
+                  </li>
+                  <li>
+                    <img src="img/reward-3.svg" width="70" alt="Награда" />
+                  </li>
+                  <li>
+                    <img src="img/reward-4.svg" alt="Награда" />
+                  </li>
+                  <li>
+                    <img src="img/reward5.png" width="70" alt="Награда" />
+                  </li>
+                  <li>
+                    <img src="img/reward-6.svg" width="70" alt="Награда" />
+                  </li>
+                  <li>
+                    <img src="img/reward-7.svg" width="70" alt="Награда" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="statistics">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="title">
+                Используя <span>POSTOPLAN,</span> вы можете получить
+              </h2>
+              <p class="subtitle">
+                По результатам опроса 3000 пользователей POSTOPLAN:
+              </p>
+            </div>
+          </div>
+          <ul class="statistics__list row no-gutters">
+            <li class="col-12 col-sm-4">
+              <p class="statistics__percent statistics__percent--green">76%</p>
+              <p class="statistics__desc">
+                уменьшили свое время работы в соцсетях более чем на 4 часа в
+                неделю
+              </p>
+            </li>
+            <li class="col-12 col-sm-4">
+              <p class="statistics__percent statistics__percent--yellow">15%</p>
+              <p class="statistics__desc">
+                увеличили количество клиентов<br />
+                уже в первые месяцы работы с сервисом
+              </p>
+            </li>
+            <li class="col-12 col-sm-4">
+              <p class="statistics__percent statistics__percent--blue">55%</p>
+              <p class="statistics__desc">
+                отметили увеличение охвата<br />
+                постов и аудитории
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8 m-auto">
+              <h2 class="features__title title">
+                Создаем выдающиеся возможности для маркетинга в соцсетях
+              </h2>
+            </div>
+          </div>
+          <ul class="features__list row">
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--blue"
+                  src="img/icons/icon-1.svg"
+                  alt="Количество аккаунтов — неограниченно"
+                />
+                <h3>Количество аккаунтов — неограниченно</h3>
+              </div>
+              <p>
+                Всё верно, добавляйте любое количество аккаунтов в соцсетях и
+                мессенджерах
+              </p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--orange"
+                  src="img/icons/icon-2.svg"
+                  alt="Количество пользователей — неограниченно"
+                />
+                <h3>Количество пользователей — неограниченно</h3>
+              </div>
+              <p>
+                Добавляйте коллег, клиентов или сотрудников для совместной
+                работы
+              </p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--blue"
+                  src="img/icons/icon-3.svg"
+                  alt="Количество проектов — неограниченно"
+                />
+
+                <h3>Количество проектов — неограниченно</h3>
+              </div>
+              <p>
+                Добавляйте аккаунты в разные проекты, чтобы дать разным людям к
+                ним доступ
+              </p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--green"
+                  src="img/icons/icon-4.svg"
+                  alt="Количество постов — неограниченно"
+                />
+                <h3>Количество постов — неограниченно</h3>
+              </div>
+              <p>Планируйте столько контента, сколько вам нужно</p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--pink"
+                  src="img/icons/icon-5.svg"
+                  alt="2 крутых графических редактора"
+                />
+                <h3>
+                  Фоторедактор и библиотека<br />
+                  с 2 млн. изображений
+                </h3>
+              </div>
+              <p>Сохраняйте свой фильтр, делайте контент быстро и легко</p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--green"
+                  src="img/icons/icon-6.svg"
+                  alt="Предварительный просмотр публикаций"
+                />
+                <h3>Предварительный просмотр публикаций</h3>
+              </div>
+              <p>
+                Размещайте контент и смотрите заранее, как он выглядит на каждой
+                платформе
+              </p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--blue"
+                  src="img/icons/icon-7.svg"
+                  alt="Более 700 идей постов в календаре"
+                />
+                <h3>Более 700 идей постов в календаре</h3>
+              </div>
+              <p>
+                В календаре POSTOPLAN несколько готовых поводов на каждый день
+              </p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--orange"
+                  src="img/icons/icon-8.svg"
+                  alt="Не только стандартные соцсети"
+                />
+                <h3>Не только стандартные соцсети</h3>
+              </div>
+              <p>
+                Есть Google My Business и планирование постинга в Telegram или
+                WhatsApp
+              </p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--blue"
+                  src="img/icons/icon-9.svg"
+                  alt="Общение с подписчиками в Social Inbox"
+                />
+                <h3>Общение с подписчиками в Social Inbox</h3>
+              </div>
+              <p>
+                Больше не нужно переключаться между аккаунтами, все доступно в
+                одном месте
+              </p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--yellow"
+                  src="img/icons/icon-10.svg"
+                  alt="Интеграция со Slack и WordPress"
+                />
+                <h3>Интеграция со Slack и WordPress</h3>
+              </div>
+              <p>И с другими нужными вам сервисами для комфортной работы</p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--blue"
+                  src="img/icons/icon-11.svg"
+                  alt="Массовое и удобное планирование"
+                />
+                <h3>Массовое и удобное планирование</h3>
+              </div>
+              <p>
+                Легко составляйте расписание для публикации контента на месяцы
+                вперед
+              </p>
+            </li>
+            <li class="col-12 col-lg-3 col-sm-6">
+              <div class="features__wrap">
+                <img
+                  class="features__img features__img--green"
+                  src="img/icons/icon-12.svg"
+                  alt="Много других крутых функций"
+                />
+              </div>
+              <p>...и много других крутых функций</p>
+            </li>
+          </ul>
+          <div class="row">
+            <div class="col-12 col-lg-3 col-md-5 m-auto">
+              <button class="features__more">See more</button>
+              <a href="" class="features__btn main-btn main-btn--pink"
+                ><span>Sign up free</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="companies">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="companies__title companies__title--bg title">
+                <span>Спасибо за упоминание <span>POSTOPLAN</span></span>
+              </h2>
+              <ul class="companies__list">
+                <li>
+                  <a href="#"
+                    ><img
+                      width="210"
+                      src="img/companies-1.png"
+                      alt="Marketing 4 ecommerce"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="140"
+                      src="img/companies-2.svg"
+                      alt="Markets Insider"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="210"
+                      src="img/companies-3.png"
+                      alt="Market watch"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="210"
+                      src="img/companies-4.png"
+                      alt="Mar tech series"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="210"
+                      src="img/companies-5.svg"
+                      alt="Entrepreneur"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img width="139" src="img/companies-6.png" alt="TED"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img width="140" src="img/companies-7.png" alt="msn"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img width="210" src="img/companies-8.png" alt="SMM"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img width="210" src="img/companies-9.png" alt="Mashable"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="210"
+                      src="img/companies-10.png"
+                      alt="Hackernoon"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="marketing">
+        <div class="container">
+          <div class="row align-items-center no-gutters">
+            <div class="col-12 col-sm-6">
+              <h2 class="marketing__title marketing__title--pink title">
+                <span>Создавайте контент легко, быстро и удобно</span>
+              </h2>
+              <p class="marketing__desc">
+                В POSTOPLAN есть идеи постов на каждый день. А также отличный
+                графический редактор с ручным и автоматическим режимом. Создание
+                контента еще никогда не было таким быстрым!
+              </p>
+            </div>
+            <div class="col-12 col-sm-6">
+              <img src="img/content-1.png" width="500" alt="Контент" />
+            </div>
+          </div>
+          <div class="row align-items-center no-gutters">
+            <div class="col-12 col-sm-5">
+              <img src="img/content-2.png" width="480" alt="Контент" />
+            </div>
+            <div class="col-12 col-sm-7 ml-auto">
+              <h2 class="marketing__title marketing__title--green title">
+                <span
+                  >Платформа для простого<br />
+                  управления соцсетями</span
+                >
+              </h2>
+              <p class="marketing__desc">
+                Этот удобный инструмент управления социальными сетями позволяет
+                увидеть, как пост будет выглядеть в ленте. Потом можете
+                запланировать это наперед.
+              </p>
+              <p class="marketing__desc">
+                Вы можете сосредоточиться на другой работе и не отвлекаться на
+                публикации вручную.
+              </p>
+            </div>
+          </div>
+          <div class="row align-items-center no-gutters">
+            <div class="col-12 col-lg-6">
+              <h2 class="marketing__title marketing__title--yellow title">
+                <span>Увеличивайте свою аудиторию и число клиентов</span>
+              </h2>
+              <p class="marketing__desc">
+                Вы используете только отложенный постинг и у вас естественным
+                способом растет аудитория. 60% пользователей POSTOPLAN отметили
+                увеличение аудитории уже в первые месяцы работы с сервисом.
+              </p>
+              <p class="marketing__desc">
+                Если нужен еще более крутой рост - воспользуйтесь встроенной
+                умной платной рекламой. Вам не нужно ничего настраивать, сами
+                все сделаем за вас *.
+              </p>
+              <p class="marketing__desc">
+                *Эта функция будет доступна 29 июня 2021 года, уже совсем скоро.
+              </p>
+            </div>
+            <div class="col-12 col-sm-6">
+              <img src="img/content-3.png" width="600" alt="Контент" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="companies companies--all">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="companies__title title">
+                Нам доверяют более 100,000+ специалистов и компаний из 147 стран
+              </h2>
+              <ul class="companies__list">
+                <li>
+                  <a href="#"
+                    ><img width="215" src="img/company-1.png" alt="Hyundai"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="215"
+                      src="img/company-2.svg"
+                      alt="Hotel Modelo"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img width="215" src="img/company-3.png" alt="UPC"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img width="215" src="img/company-4.svg" alt="Alumni"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="215"
+                      src="img/company-5.png"
+                      alt="Art Creation"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img width="91" src="img/company-6.svg" alt="GMX"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img width="175" src="img/company-7.png" alt="Inka"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img width="173" src="img/company-8.png" alt="Asahi"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="131"
+                      src="img/company-9.png"
+                      alt="Lithium Australia"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="215"
+                      src="img/company-10.svg"
+                      alt="Reikartz Hotel Group"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      width="65"
+                      src="img/company-11.png"
+                      alt="BS social media"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-5 col-lg-3 m-auto">
+              <a href="" class="companies__btn main-btn main-btn--pink"
+                ><span>Sign up free</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="instructions">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="instructions__title title">
+                Что дает маркетинг в соцсетях с <span>POSTOPLAN</span>
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 m-auto">
+              <img src="img/marketing.png" width="570" alt="" />
+            </div>
+            <div class="col-12 col-lg-6">
+              <ul class="instructions__list">
+                <li>
+                  <img
+                    class="instructions__img instructions__img--yellow"
+                    src="img/icons/feature-1.svg"
+                    alt="Устраните стресс"
+                  />
+                  <div class="instructions__wrap">
+                    <h3>Устраните стресс</h3>
+                    <p>
+                      POSTOPLAN уведомит вас о состоянии каждого
+                      запланированного поста или сообщения. Нет необходимости
+                      беспокоиться о том, был ли ваш пост опубликован или нет.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <img
+                    class="instructions__img instructions__img--green"
+                    src="img/icons/feature-2.svg"
+                    alt="Экономьте свое время"
+                  />
+                  <div class="instructions__wrap">
+                    <h3>Экономьте свое время</h3>
+                    <p>
+                      Отложенный постинг с помощью POSTOPLAN помогает хорошо
+                      организовать рабочий процесс, позволяя освободить больше
+                      драгоценного времени.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <img
+                    class="instructions__img instructions__img--blue"
+                    src="img/icons/feature-3.svg"
+                    alt="Автоматизируйте работу"
+                  />
+                  <div class="instructions__wrap">
+                    <h3>Автоматизируйте работу</h3>
+                    <p>
+                      Например, настройте пост о рекламной акции, который будет
+                      публиковаться каждую пятницу. Наша система сделает всё
+                      остальное.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <img
+                    class="instructions__img instructions__img--orange"
+                    src="img/icons/feature-4.svg"
+                    alt="Создавайте контент легко"
+                  />
+                  <div class="instructions__wrap">
+                    <h3>Создавайте контент легко</h3>
+                    <p>
+                      В POSTOPLAN есть примеры и шаблоны запланированных
+                      публикаций и инфоповодов на каждый день. Создание контента
+                      еще никогда не было таким быстрым!
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="reviews__list">
+                <li class="reviews__item">
+                  <div class="review">
+                    <div class="review__wrap">
+                      <p class="review__text">
+                        POSTOPLAN offers two excellent and very useful
+                        advantages for us! The first is having our various
+                        social network pages all in one place and the second is
+                        being able to schedule the posts we need at the same
+                        time. This way, we can write different texts for
+                        different social networks and do all this without having
+                        to switch from one account to another. It's even better
+                        that the system lets us make scheduled posts. It helps
+                        us a lot because the all can be created at the same
+                        time. Also, the scheduling can be done within seven days
+                        using the basic Postoplan version, so you can easily
+                        schedule posts for the whole week. This is a good
+                        solution for well-coordinated team marketing.
+                      </p>
+                      <button class="review__all">
+                        Читать отзыв полностью
+                      </button>
+                    </div>
+                    <div class="review__bottom">
+                      <div class="review__left">
+                        <p class="review__author">Sergi Truñó Cunill</p>
+                        <div class="review__info">
+                          <img
+                            src="img/review-company.png"
+                            alt="Dynamics UPC Manresa"
+                          />
+                          <div class="review__company">
+                            <p class="review__company-name">
+                              Dynamics UPC Manresa
+                            </p>
+                            <p class="review__company-prof">
+                              Marketing Coordinator
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="review__right">
+                        <img src="img/author.jpg" alt="Sergi Truñó Cunill" />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="reviews__item">
+                  <div class="review">
+                    <div class="review__wrap">
+                      <p class="review__text">
+                        I receive all the important notifications! It's a great
+                        tool to help me manage my time. I can plan posts and no
+                        longer have to worry about them. I also can create them
+                        all in just a few hours and no longer have to think
+                        about them all week. Another advantage is that I can
+                        synchronize all my social pages and manage them from one
+                        place, which is very important. And I also like the fact
+                        this software has no annoying ads. POSTOPLAN is the
+                        social media management tool I’ve been long searching
+                        for. On the whole, I like POSTOPLAN!
+                      </p>
+                      <button class="review__all">
+                        Читать отзыв полностью
+                      </button>
+                    </div>
+                    <div class="review__bottom">
+                      <div class="review__left">
+                        <p class="review__author">Ricardo Acosta González</p>
+                        <div class="review__info">
+                          <img
+                            src="img/reviewes_logo_4.png"
+                            alt="ACO consultores"
+                          />
+                          <div class="review__company">
+                            <p class="review__company-name">ACO consultores</p>
+                            <p class="review__company-prof">CEO</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="review__right">
+                        <img
+                          src="img/reviewes_1.jpg"
+                          alt="Ricardo Acosta González"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="reviews__item">
+                  <div class="review">
+                    <div class="review__wrap">
+                      <p class="review__text">
+                        С POSTOPLAN я могу контролировать и планировать все свои
+                        посты. Это позволяет мне управлять своим временем и
+                        всеми своими социальными сетями с помощью одного и того
+                        же инструмента.
+                      </p>
+                      <button class="review__all">
+                        Читать отзыв полностью
+                      </button>
+                    </div>
+                    <div class="review__bottom">
+                      <div class="review__left">
+                        <p class="review__author">Alejandro Arriola Tello</p>
+                        <div class="review__info">
+                          <img
+                            src="img/reviewes_logo_5.png"
+                            alt="Arriola & Asociados"
+                          />
+                          <div class="review__company">
+                            <p class="review__company-name">
+                              Arriola & Asociados
+                            </p>
+                            <p class="review__company-prof">Socio Fundador</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="review__right">
+                        <img
+                          src="img/reviewes_5.jpg"
+                          alt="Alejandro Arriola Tello"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="reviews__item">
+                  <div class="review">
+                    <div class="review__wrap">
+                      <p class="review__text">
+                        С POSTOPLAN я могу контролировать и планировать все свои
+                        посты. Это позволяет мне управлять своим временем и
+                        всеми своими социальными сетями с помощью одного и того
+                        же инструмента.
+                      </p>
+                      <button class="review__all">
+                        Читать отзыв полностью
+                      </button>
+                    </div>
+                    <div class="review__bottom">
+                      <div class="review__left">
+                        <p class="review__author">Алехандро Ариола</p>
+                        <div class="review__info">
+                          <img
+                            src="img/review-company.png"
+                            alt="Arriola & Asociados"
+                          />
+                          <div class="review__company">
+                            <p class="review__company-name">
+                              Arriola & Asociados
+                            </p>
+                            <p class="review__company-prof">
+                              Партнер-учредитель
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="review__right">
+                        <img
+                          src="img/review-author.png"
+                          alt="Arriola & Asociados"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="reviews__item">
+                  <div class="review">
+                    <div class="review__wrap">
+                      <p class="review__text">
+                        С POSTOPLAN я могу контролировать и планировать все свои
+                        посты. Это позволяет мне управлять своим временем и
+                        всеми своими социальными сетями с помощью одного и того
+                        же инструмента.
+                      </p>
+                      <button class="review__all">
+                        Читать отзыв полностью
+                      </button>
+                    </div>
+                    <div class="review__bottom">
+                      <div class="review__left">
+                        <p class="review__author">Алехандро Ариола</p>
+                        <div class="review__info">
+                          <img
+                            src="img/review-company.png"
+                            alt="Arriola & Asociados"
+                          />
+                          <div class="review__company">
+                            <p class="review__company-name">
+                              Arriola & Asociados
+                            </p>
+                            <p class="review__company-prof">
+                              Партнер-учредитель
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="review__right">
+                        <img
+                          src="img/review-author.png"
+                          alt="Arriola & Asociados"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="reviews__item">
+                  <div class="review">
+                    <div class="review__wrap">
+                      <p class="review__text">
+                        С POSTOPLAN я могу контролировать и планировать все свои
+                        посты. Это позволяет мне управлять своим временем и
+                        всеми своими социальными сетями с помощью одного и того
+                        же инструмента.
+                      </p>
+                      <button class="review__all">
+                        Читать отзыв полностью
+                      </button>
+                    </div>
+                    <div class="review__bottom">
+                      <div class="review__left">
+                        <p class="review__author">Алехандро Ариола</p>
+                        <div class="review__info">
+                          <img
+                            src="img/review-company.png"
+                            alt="Arriola & Asociados"
+                          />
+                          <div class="review__company">
+                            <p class="review__company-name">
+                              Arriola & Asociados
+                            </p>
+                            <p class="review__company-prof">
+                              Партнер-учредитель
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="review__right">
+                        <img
+                          src="img/review-author.png"
+                          alt="Arriola & Asociados"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="reviews__item">
+                  <div class="review">
+                    <div class="review__wrap">
+                      <p class="review__text">
+                        С POSTOPLAN я могу контролировать и планировать все свои
+                        посты. Это позволяет мне управлять своим временем и
+                        всеми своими социальными сетями с помощью одного и того
+                        же инструмента.
+                      </p>
+                      <button class="review__all">
+                        Читать отзыв полностью
+                      </button>
+                    </div>
+                    <div class="review__bottom">
+                      <div class="review__left">
+                        <p class="review__author">Алехандро Ариола</p>
+                        <div class="review__info">
+                          <img
+                            src="img/review-company.png"
+                            alt="Arriola & Asociados"
+                          />
+                          <div class="review__company">
+                            <p class="review__company-name">
+                              Arriola & Asociados
+                            </p>
+                            <p class="review__company-prof">
+                              Партнер-учредитель
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="review__right">
+                        <img
+                          src="img/review-author.png"
+                          alt="Arriola & Asociados"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <a href="#" class="reviews__btn main-btn main-btn--border"
+                >Смотреть все отзывы</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="work">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="work__title title">
+                <span>POSTOPLAN</span> облегчит вашу работу
+              </h2>
+              <p class="work__subtitle">
+                И сделает ваш рабочий день лучше. Благодаря ему вы сможете:
+              </p>
+              <ul class="work__list">
+                <li>
+                  <img
+                    class="work__img work__img--yellow"
+                    src="img/icons/work-1.svg"
+                    alt="Управлять всеми аккаунтами из одной платформы"
+                  />
+
+                  <p>Управлять всеми аккаунтами из одной платформы</p>
+                </li>
+                <li>
+                  <img
+                    class="work__img work__img--green"
+                    src="img/icons/work-2.svg"
+                    alt="Избавиться от нехватки идей для постов"
+                  />
+
+                  <p>Избавиться от нехватки идей для постов</p>
+                </li>
+                <li>
+                  <img
+                    class="work__img work__img--orange"
+                    src="img/icons/work-3.svg"
+                    alt="Получить больше внимания аудитории"
+                  />
+
+                  <p>
+                    Получить больше<br />
+                    внимания аудитории
+                  </p>
+                </li>
+                <li>
+                  <img
+                    class="work__img work__img--blue"
+                    src="img/icons/work-4.svg"
+                    alt="Уменьшить затраты времени на постинг"
+                  />
+
+                  <p>Уменьшить затраты времени на постинг</p>
+                </li>
+                <li>
+                  <img
+                    class="work__img work__img--pink"
+                    src="img/icons/work-5.svg"
+                    alt="Избавиться от беспокойства
+             что пост не опубликуется вовремя"
+                  />
+                  <p>
+                    Избавиться от беспокойства что пост не опубликуется вовремя
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="packages">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="packages__title title">
+                Выберите лучший пакет приложения для управления социальными
+                сетями
+              </h2>
+              <div class="packages__list">
+                <ul class="tabs">
+                  <li class="tabs__item tabs__item--blue">
+                    <span>Free</span>
+                  </li>
+                  <li class="tabs__item tabs__item--active tabs__item--yellow">
+                    <span>PRO</span>
+                  </li>
+                  <li class="tabs__item tabs__item--green">
+                    <span>Team</span>
+                  </li>
+                </ul>
+                <div class="packages__content packages__content--active">
+                  <div class="packages__item">
+                    <ul class="packages__services">
+                      <li>
+                        <span>Количество аккаунтов</span>
+                        <span>Неограниченно</span>
+                      </li>
+                      <li>
+                        <span>Количество постов</span>
+                        <span>Неограниченно</span>
+                      </li>
+                      <li>
+                        <span>Количество проектов</span>
+                        <span>Неограниченно</span>
+                      </li>
+                      <li>
+                        <span>Количество пользователей</span>
+                        <span>1 пользователь</span>
+                      </li>
+                      <li>
+                        <span>Services available</span>
+                        <ul class="packages__social packages__social--width">
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g>
+                                <path
+                                  d="M18.896 3.53445e-08H1.10306C0.493774 0.000305211 -0.000152553 0.494537 3.53445e-08 1.10397V18.8969C0.000305211 19.5062 0.494537 20.0002 1.10397 20H18.896C19.5056 20.0002 19.9998 19.5061 20 18.8965C20 18.8963 20 18.8962 20 18.896V1.10306C19.9997 0.493774 19.5055 -0.000152553 18.896 3.53445e-08Z"
+                                  fill="#4267B2"
+                                ></path>
+                                <path
+                                  d="M13.8086 20V12.2657H16.416L16.8066 9.23831H13.8086V7.31021C13.8086 6.43573 14.0514 5.83987 15.3053 5.83987H16.8945V3.13953C16.618 3.10275 15.6694 3.02051 14.5656 3.02051C12.2609 3.02051 10.6836 4.42676 10.6836 7.01038V9.23831H8.08594V12.2657H10.6836V20H13.8086Z"
+                                  fill="white"
+                                ></path>
+                              </g>
+                              <defs>
+                                <clipPath>
+                                  <rect
+                                    width="20"
+                                    height="20"
+                                    fill="white"
+                                  ></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g clip-path="url(#clip0)">
+                                <path
+                                  d="M10.0009 19.9998C15.5237 19.9998 20.0008 15.5227 20.0008 9.99991C20.0008 4.47711 15.5237 0 10.0009 0C4.47809 0 0.000976562 4.47711 0.000976562 9.99991C0.000976562 15.5227 4.47809 19.9998 10.0009 19.9998Z"
+                                  fill="#55ACEE"
+                                ></path>
+                                <path
+                                  d="M16.1254 7.18656C15.6969 7.37658 15.2359 7.50511 14.7525 7.56251C15.2461 7.26678 15.6249 6.79885 15.8037 6.24037C15.3418 6.51435 14.83 6.71311 14.2858 6.82024C13.8498 6.35588 13.2286 6.06567 12.5407 6.06567C11.2208 6.06567 10.1504 7.13611 10.1504 8.45593C10.1504 8.64328 10.1716 8.82564 10.2126 9.00069C8.22611 8.90104 6.46475 7.9495 5.28575 6.50294C5.08004 6.85589 4.96203 7.26678 4.96203 7.70476C4.96203 8.53383 5.38432 9.26576 6.02534 9.69429C5.63371 9.68199 5.26489 9.5745 4.94278 9.395C4.9426 9.40516 4.9426 9.41532 4.9426 9.4253C4.9426 10.5834 5.76687 11.5494 6.86012 11.7689C6.65976 11.8238 6.44817 11.8528 6.23052 11.8528C6.07614 11.8528 5.92659 11.838 5.78077 11.8102C6.08488 12.7596 6.96743 13.4507 8.01363 13.4702C7.19543 14.1113 6.16492 14.4934 5.04474 14.4934C4.85223 14.4934 4.66149 14.4821 4.47485 14.4598C5.5321 15.1383 6.78882 15.5338 8.13859 15.5338C12.5351 15.5338 14.9395 11.8917 14.9395 8.73277C14.9395 8.6292 14.9372 8.52599 14.9325 8.42367C15.3999 8.08676 15.8051 7.6659 16.1254 7.18656Z"
+                                  fill="#F1F2F2"
+                                ></path>
+                              </g>
+                              <defs>
+                                <clipPath>
+                                  <rect
+                                    width="20"
+                                    height="20"
+                                    fill="white"
+                                  ></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                                fill="#039BE5"
+                              ></path>
+                              <path
+                                d="M4.57581 9.78326L14.2175 6.06576C14.665 5.9041 15.0558 6.17493 14.9108 6.8516L14.9116 6.85076L13.27 14.5849C13.1483 15.1333 12.8225 15.2666 12.3666 15.0083L9.86664 13.1658L8.66081 14.3274C8.52748 14.4608 8.41498 14.5733 8.15664 14.5733L8.33414 12.0291L12.9675 7.84326C13.1691 7.66576 12.9225 7.56576 12.6566 7.74243L6.93081 11.3474L4.46247 10.5774C3.92664 10.4074 3.91497 10.0416 4.57581 9.78326Z"
+                                fill="white"
+                              ></path>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g>
+                                <path
+                                  d="M17.0703 18.7889H2.92969C1.96043 18.7889 1.17188 18.0003 1.17188 17.0311V8.51441C1.17188 8.32473 1.26371 8.14676 1.41832 8.03684L9.66051 2.17746C9.86379 2.03297 10.1362 2.03297 10.3395 2.17746L18.5817 8.03684C18.7363 8.14676 18.8282 8.32473 18.8282 8.51441V17.0311C18.8281 18.0003 18.0396 18.7889 17.0703 18.7889Z"
+                                  fill="#4175DF"
+                                ></path>
+                                <path
+                                  d="M17.0703 18.7889C18.0396 18.7889 18.8281 18.0003 18.8281 17.0311V8.5144C18.8281 8.32472 18.7363 8.14675 18.5817 8.03683L10.3395 2.17745C10.2379 2.10519 10.1189 2.06909 10 2.06909V18.7889H17.0703Z"
+                                  fill="#4254B6"
+                                ></path>
+                                <path
+                                  d="M4.97926 6.92676C4.97926 8.30039 3.86473 9.41375 2.48965 9.41375C1.11457 9.41375 0 8.30039 0 6.92676H4.97926Z"
+                                  fill="#4086F4"
+                                ></path>
+                                <path
+                                  d="M9.99999 6.92676C9.99999 8.30039 8.84398 9.41375 7.46886 9.41375C6.09374 9.41375 4.97925 8.30043 4.97925 6.92676H9.99999Z"
+                                  fill="#324492"
+                                ></path>
+                                <path
+                                  d="M20 6.92684H15.0208L13.7345 1.21094H16.7411C17.2125 1.21094 17.6436 1.47703 17.8544 1.89816L20 6.92684Z"
+                                  fill="#4254B6"
+                                ></path>
+                                <path
+                                  d="M15.0207 6.92684H10V1.21094H13.7345L15.0207 6.92684Z"
+                                  fill="#4086F4"
+                                ></path>
+                                <path
+                                  d="M9.99999 1.21094V6.92684H4.97925L6.22405 1.21094H9.99999Z"
+                                  fill="#4254B6"
+                                ></path>
+                                <path
+                                  d="M6.22406 1.21094L4.97926 6.92684H0L2.14563 1.8982C2.35641 1.47707 2.78754 1.21098 3.25891 1.21098H6.22406V1.21094Z"
+                                  fill="#80AEF8"
+                                ></path>
+                                <path
+                                  d="M15.0207 6.92676C15.0207 8.30039 13.9062 9.41375 12.5311 9.41375C11.1561 9.41375 10 8.30039 10 6.92676H15.0207Z"
+                                  fill="#4175DF"
+                                ></path>
+                                <path
+                                  d="M20 6.92676C20 8.30039 18.8854 9.41375 17.5104 9.41375C16.1353 9.41375 15.0208 8.30043 15.0208 6.92676H20Z"
+                                  fill="#324492"
+                                ></path>
+                                <path
+                                  d="M15.8594 12.9294H14.1016C13.778 12.9294 13.5156 13.1917 13.5156 13.5153C13.5156 13.8389 13.778 14.1013 14.1016 14.1013H15.1727C14.9308 14.7832 14.2795 15.2732 13.5156 15.2732C12.5464 15.2732 11.7578 14.4846 11.7578 13.5153C11.7578 12.5461 12.5464 11.7575 13.5156 11.7575C13.9852 11.7575 14.4266 11.9404 14.7586 12.2724C14.9874 12.5012 15.3584 12.5012 15.5872 12.2724C15.8161 12.0436 15.816 11.6726 15.5872 11.4438C15.0339 10.8904 14.2982 10.5857 13.5156 10.5857C11.9002 10.5857 10.5859 11.9 10.5859 13.5154C10.5859 15.1308 11.9002 16.4451 13.5156 16.4451C15.1311 16.4451 16.4453 15.1308 16.4453 13.5154C16.4453 13.1917 16.183 12.9294 15.8594 12.9294Z"
+                                  fill="#E3E7EA"
+                                ></path>
+                              </g>
+                              <defs>
+                                <clipPath>
+                                  <rect
+                                    width="20"
+                                    height="20"
+                                    fill="white"
+                                  ></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1.42125 9.99969C1.42125 13.4059 3.39 16.3434 6.265 17.7203L2.16406 6.50844C1.68813 7.5625 1.40625 8.75 1.40625 9.99969H1.42125ZM15.7909 9.56688C15.7909 8.50625 15.41 7.7725 15.0834 7.20125C14.6487 6.49406 14.2412 5.89594 14.2412 5.18906C14.2412 4.40062 14.8387 3.66656 15.6816 3.66656C15.7194 3.66656 15.7441 3.66656 15.8066 3.67344C14.2666 2.28125 12.2188 1.40625 10 1.42125C7.00281 1.42125 4.36656 2.95906 2.8325 5.29625C3.03406 5.29625 3.23875 5.29625 3.395 5.30656C4.29219 5.30656 5.68125 5.1975 5.68125 5.1975C6.14344 5.17063 6.2125 5.85375 5.74375 5.91625C5.74375 5.91625 5.27906 5.97063 4.76188 5.99781L7.88594 15.29L9.76344 9.65969L8.42719 5.99781C7.965 5.97063 7.5275 5.91625 7.5275 5.91625C7.065 5.88906 7.11937 5.18219 7.58187 5.20937C7.58187 5.20937 8.98812 5.30312 9.83187 5.31844C10.7288 5.31844 12.1184 5.20937 12.1184 5.20937C12.5806 5.1825 12.6497 5.86562 12.1809 5.91625C12.1809 5.91625 11.7156 5.97063 11.1991 5.99781L14.2991 15.2191L15.155 12.3603C15.5087 11.1562 15.7812 10.3125 15.7812 9.56688H15.7909ZM10.1503 10.75L7.57625 18.2294C8.345 18.4481 9.17 18.5731 10.0138 18.5731C11.0128 18.5731 11.9706 18.4006 12.8625 18.0869C12.84 18.05 12.8184 18.0109 12.8013 17.9684L10.1503 10.75ZM17.5275 5.875C17.5647 6.15625 17.59 6.4375 17.59 6.75719C17.59 7.6275 17.4272 8.60594 16.9375 9.82969L14.3172 17.4053C16.8675 15.9184 18.5828 13.1553 18.5828 9.99031C18.5784 8.5 18.1875 7.09375 17.5312 5.88438L17.5275 5.875ZM10 0C4.48594 0 0 4.48594 0 10C0 15.5 4.5 20 10 20C15.5 20 20 15.5141 20 9.99969C20 4.5 15.5 0 10 0ZM10 19.5416C4.73906 19.5416 0.458438 15.2609 0.458438 9.99969C0.458438 4.75 4.75 0.46875 10 0.46875C15.25 0.46875 19.5419 4.75 19.5312 10.01C19.5416 15.25 15.25 19.5312 10 19.5416Z"
+                                fill="#0073AA"
+                              ></path>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="18"
+                              viewBox="0 0 20 18"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.73099 11.1527C3.73099 12.17 2.89999 13.001 1.88271 13.001C0.865455 13.001 0.0344238 12.17 0.0344238 11.1527C0.0344238 10.1355 0.865455 9.30444 1.88271 9.30444H3.73099V11.1527Z"
+                                fill="#E01E5A"
+                              ></path>
+                              <path
+                                d="M4.66223 11.1527C4.66223 10.1355 5.49326 9.30444 6.51051 9.30444C7.5278 9.30444 8.35879 10.1355 8.35879 11.1527V15.7806C8.35879 16.7979 7.5278 17.6289 6.51051 17.6289C5.49326 17.6289 4.66223 16.7979 4.66223 15.7806V11.1527Z"
+                                fill="#E01E5A"
+                              ></path>
+                              <path
+                                d="M6.51051 3.73099C5.49326 3.73099 4.66223 2.89999 4.66223 1.88271C4.66223 0.865455 5.49326 0.0344238 6.51051 0.0344238C7.5278 0.0344238 8.35879 0.865455 8.35879 1.88271V3.73099H6.51051Z"
+                                fill="#36C5F0"
+                              ></path>
+                              <path
+                                d="M6.51058 4.66211C7.52786 4.66211 8.35886 5.49314 8.35886 6.51039C8.35886 7.52768 7.52786 8.35867 6.51058 8.35867H1.88271C0.865455 8.35867 0.0344238 7.52768 0.0344238 6.51039C0.0344238 5.49314 0.865455 4.66211 1.88271 4.66211H6.51058Z"
+                                fill="#36C5F0"
+                              ></path>
+                              <path
+                                d="M13.9323 6.51039C13.9323 5.49314 14.7633 4.66211 15.7805 4.66211C16.7978 4.66211 17.6288 5.49314 17.6288 6.51039C17.6288 7.52768 16.7978 8.35867 15.7805 8.35867H13.9323V6.51039Z"
+                                fill="#2EB67D"
+                              ></path>
+                              <path
+                                d="M13.001 6.51058C13.001 7.52786 12.17 8.35886 11.1527 8.35886C10.1355 8.35886 9.30444 7.52786 9.30444 6.51058V1.88271C9.30444 0.865455 10.1355 0.0344238 11.1527 0.0344238C12.17 0.0344238 13.001 0.865455 13.001 1.88271V6.51058Z"
+                                fill="#2EB67D"
+                              ></path>
+                              <path
+                                d="M11.1527 13.9324C12.17 13.9324 13.001 14.7634 13.001 15.7807C13.001 16.7979 12.17 17.6289 11.1527 17.6289C10.1355 17.6289 9.30444 16.7979 9.30444 15.7807V13.9324H11.1527Z"
+                                fill="#ECB22E"
+                              ></path>
+                              <path
+                                d="M11.1527 13.001C10.1355 13.001 9.30444 12.17 9.30444 11.1527C9.30444 10.1355 10.1355 9.30444 11.1527 9.30444H15.7806C16.7979 9.30444 17.6289 10.1355 17.6289 11.1527C17.6289 12.17 16.7979 13.001 15.7806 13.001H11.1527Z"
+                                fill="#ECB22E"
+                              ></path>
+                            </svg>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="packages__item-wrap">
+                          <img src="img/icons/insta.svg" alt="Instagram" />
+                          <span>Instagram accounts</span>
+                        </div>
+                        <span class="packages__item-available">
+                          <img src="img/icons/cross.svg" alt="Недоступно" />
+                        </span>
+                      </li>
+                      <li>
+                        <div class="packages__item-wrap">
+                          <img src="img/icons/whatsapp.svg" alt="Instagram" />
+                          <span>Whatsapp accounts</span>
+                        </div>
+                        <span class="packages__item-available">
+                          <img src="img/icons/cross.svg" alt="Недоступно" />
+                        </span>
+                      </li>
+                      <li>
+                        <span>Более 1 фото в посте</span>
+                        <span class="packages__item-available">
+                          <img src="img/icons/cross.svg" alt="Недоступно" />
+                        </span>
+                      </li>
+                      <li>
+                        <span>Social Inbox</span>
+                        <span class="packages__item-available"> 7 дней </span>
+                      </li>
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available"> 7 дней </span>
+                      </li>
+                      <li>
+                        <span>Количество цикличных задач</span>
+                        <span class="packages__item-available">
+                          1 задача на все аккаунты
+                        </span>
+                      </li>
+                      <li>
+                        <span>Use of mobile applications</span>
+                        <span class="packages__item-available">
+                          <img src="img/icons/cross.svg" alt="Недоступно" />
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="packages__item packages__item--active">
+                    <ul class="packages__services">
+                      <li>
+                        <span>Период планирования</span>
+                        <span> Неограниченно </span>
+                      </li>
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Services available</span>
+                        <ul class="packages__social">
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g>
+                                <path
+                                  d="M18.896 3.53445e-08H1.10306C0.493774 0.000305211 -0.000152553 0.494537 3.53445e-08 1.10397V18.8969C0.000305211 19.5062 0.494537 20.0002 1.10397 20H18.896C19.5056 20.0002 19.9998 19.5061 20 18.8965C20 18.8963 20 18.8962 20 18.896V1.10306C19.9997 0.493774 19.5055 -0.000152553 18.896 3.53445e-08Z"
+                                  fill="#4267B2"
+                                ></path>
+                                <path
+                                  d="M13.8086 20V12.2657H16.416L16.8066 9.23831H13.8086V7.31021C13.8086 6.43573 14.0514 5.83987 15.3053 5.83987H16.8945V3.13953C16.618 3.10275 15.6694 3.02051 14.5656 3.02051C12.2609 3.02051 10.6836 4.42676 10.6836 7.01038V9.23831H8.08594V12.2657H10.6836V20H13.8086Z"
+                                  fill="white"
+                                ></path>
+                              </g>
+                              <defs>
+                                <clipPath>
+                                  <rect
+                                    width="20"
+                                    height="20"
+                                    fill="white"
+                                  ></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g clip-path="url(#clip0)">
+                                <path
+                                  d="M10.0009 19.9998C15.5237 19.9998 20.0008 15.5227 20.0008 9.99991C20.0008 4.47711 15.5237 0 10.0009 0C4.47809 0 0.000976562 4.47711 0.000976562 9.99991C0.000976562 15.5227 4.47809 19.9998 10.0009 19.9998Z"
+                                  fill="#55ACEE"
+                                ></path>
+                                <path
+                                  d="M16.1254 7.18656C15.6969 7.37658 15.2359 7.50511 14.7525 7.56251C15.2461 7.26678 15.6249 6.79885 15.8037 6.24037C15.3418 6.51435 14.83 6.71311 14.2858 6.82024C13.8498 6.35588 13.2286 6.06567 12.5407 6.06567C11.2208 6.06567 10.1504 7.13611 10.1504 8.45593C10.1504 8.64328 10.1716 8.82564 10.2126 9.00069C8.22611 8.90104 6.46475 7.9495 5.28575 6.50294C5.08004 6.85589 4.96203 7.26678 4.96203 7.70476C4.96203 8.53383 5.38432 9.26576 6.02534 9.69429C5.63371 9.68199 5.26489 9.5745 4.94278 9.395C4.9426 9.40516 4.9426 9.41532 4.9426 9.4253C4.9426 10.5834 5.76687 11.5494 6.86012 11.7689C6.65976 11.8238 6.44817 11.8528 6.23052 11.8528C6.07614 11.8528 5.92659 11.838 5.78077 11.8102C6.08488 12.7596 6.96743 13.4507 8.01363 13.4702C7.19543 14.1113 6.16492 14.4934 5.04474 14.4934C4.85223 14.4934 4.66149 14.4821 4.47485 14.4598C5.5321 15.1383 6.78882 15.5338 8.13859 15.5338C12.5351 15.5338 14.9395 11.8917 14.9395 8.73277C14.9395 8.6292 14.9372 8.52599 14.9325 8.42367C15.3999 8.08676 15.8051 7.6659 16.1254 7.18656Z"
+                                  fill="#F1F2F2"
+                                ></path>
+                              </g>
+                              <defs>
+                                <clipPath>
+                                  <rect
+                                    width="20"
+                                    height="20"
+                                    fill="white"
+                                  ></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                                fill="#039BE5"
+                              ></path>
+                              <path
+                                d="M4.57581 9.78326L14.2175 6.06576C14.665 5.9041 15.0558 6.17493 14.9108 6.8516L14.9116 6.85076L13.27 14.5849C13.1483 15.1333 12.8225 15.2666 12.3666 15.0083L9.86664 13.1658L8.66081 14.3274C8.52748 14.4608 8.41498 14.5733 8.15664 14.5733L8.33414 12.0291L12.9675 7.84326C13.1691 7.66576 12.9225 7.56576 12.6566 7.74243L6.93081 11.3474L4.46247 10.5774C3.92664 10.4074 3.91497 10.0416 4.57581 9.78326Z"
+                                fill="white"
+                              ></path>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g>
+                                <path
+                                  d="M17.0703 18.7889H2.92969C1.96043 18.7889 1.17188 18.0003 1.17188 17.0311V8.51441C1.17188 8.32473 1.26371 8.14676 1.41832 8.03684L9.66051 2.17746C9.86379 2.03297 10.1362 2.03297 10.3395 2.17746L18.5817 8.03684C18.7363 8.14676 18.8282 8.32473 18.8282 8.51441V17.0311C18.8281 18.0003 18.0396 18.7889 17.0703 18.7889Z"
+                                  fill="#4175DF"
+                                ></path>
+                                <path
+                                  d="M17.0703 18.7889C18.0396 18.7889 18.8281 18.0003 18.8281 17.0311V8.5144C18.8281 8.32472 18.7363 8.14675 18.5817 8.03683L10.3395 2.17745C10.2379 2.10519 10.1189 2.06909 10 2.06909V18.7889H17.0703Z"
+                                  fill="#4254B6"
+                                ></path>
+                                <path
+                                  d="M4.97926 6.92676C4.97926 8.30039 3.86473 9.41375 2.48965 9.41375C1.11457 9.41375 0 8.30039 0 6.92676H4.97926Z"
+                                  fill="#4086F4"
+                                ></path>
+                                <path
+                                  d="M9.99999 6.92676C9.99999 8.30039 8.84398 9.41375 7.46886 9.41375C6.09374 9.41375 4.97925 8.30043 4.97925 6.92676H9.99999Z"
+                                  fill="#324492"
+                                ></path>
+                                <path
+                                  d="M20 6.92684H15.0208L13.7345 1.21094H16.7411C17.2125 1.21094 17.6436 1.47703 17.8544 1.89816L20 6.92684Z"
+                                  fill="#4254B6"
+                                ></path>
+                                <path
+                                  d="M15.0207 6.92684H10V1.21094H13.7345L15.0207 6.92684Z"
+                                  fill="#4086F4"
+                                ></path>
+                                <path
+                                  d="M9.99999 1.21094V6.92684H4.97925L6.22405 1.21094H9.99999Z"
+                                  fill="#4254B6"
+                                ></path>
+                                <path
+                                  d="M6.22406 1.21094L4.97926 6.92684H0L2.14563 1.8982C2.35641 1.47707 2.78754 1.21098 3.25891 1.21098H6.22406V1.21094Z"
+                                  fill="#80AEF8"
+                                ></path>
+                                <path
+                                  d="M15.0207 6.92676C15.0207 8.30039 13.9062 9.41375 12.5311 9.41375C11.1561 9.41375 10 8.30039 10 6.92676H15.0207Z"
+                                  fill="#4175DF"
+                                ></path>
+                                <path
+                                  d="M20 6.92676C20 8.30039 18.8854 9.41375 17.5104 9.41375C16.1353 9.41375 15.0208 8.30043 15.0208 6.92676H20Z"
+                                  fill="#324492"
+                                ></path>
+                                <path
+                                  d="M15.8594 12.9294H14.1016C13.778 12.9294 13.5156 13.1917 13.5156 13.5153C13.5156 13.8389 13.778 14.1013 14.1016 14.1013H15.1727C14.9308 14.7832 14.2795 15.2732 13.5156 15.2732C12.5464 15.2732 11.7578 14.4846 11.7578 13.5153C11.7578 12.5461 12.5464 11.7575 13.5156 11.7575C13.9852 11.7575 14.4266 11.9404 14.7586 12.2724C14.9874 12.5012 15.3584 12.5012 15.5872 12.2724C15.8161 12.0436 15.816 11.6726 15.5872 11.4438C15.0339 10.8904 14.2982 10.5857 13.5156 10.5857C11.9002 10.5857 10.5859 11.9 10.5859 13.5154C10.5859 15.1308 11.9002 16.4451 13.5156 16.4451C15.1311 16.4451 16.4453 15.1308 16.4453 13.5154C16.4453 13.1917 16.183 12.9294 15.8594 12.9294Z"
+                                  fill="#E3E7EA"
+                                ></path>
+                              </g>
+                              <defs>
+                                <clipPath>
+                                  <rect
+                                    width="20"
+                                    height="20"
+                                    fill="white"
+                                  ></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1.42125 9.99969C1.42125 13.4059 3.39 16.3434 6.265 17.7203L2.16406 6.50844C1.68813 7.5625 1.40625 8.75 1.40625 9.99969H1.42125ZM15.7909 9.56688C15.7909 8.50625 15.41 7.7725 15.0834 7.20125C14.6487 6.49406 14.2412 5.89594 14.2412 5.18906C14.2412 4.40062 14.8387 3.66656 15.6816 3.66656C15.7194 3.66656 15.7441 3.66656 15.8066 3.67344C14.2666 2.28125 12.2188 1.40625 10 1.42125C7.00281 1.42125 4.36656 2.95906 2.8325 5.29625C3.03406 5.29625 3.23875 5.29625 3.395 5.30656C4.29219 5.30656 5.68125 5.1975 5.68125 5.1975C6.14344 5.17063 6.2125 5.85375 5.74375 5.91625C5.74375 5.91625 5.27906 5.97063 4.76188 5.99781L7.88594 15.29L9.76344 9.65969L8.42719 5.99781C7.965 5.97063 7.5275 5.91625 7.5275 5.91625C7.065 5.88906 7.11937 5.18219 7.58187 5.20937C7.58187 5.20937 8.98812 5.30312 9.83187 5.31844C10.7288 5.31844 12.1184 5.20937 12.1184 5.20937C12.5806 5.1825 12.6497 5.86562 12.1809 5.91625C12.1809 5.91625 11.7156 5.97063 11.1991 5.99781L14.2991 15.2191L15.155 12.3603C15.5087 11.1562 15.7812 10.3125 15.7812 9.56688H15.7909ZM10.1503 10.75L7.57625 18.2294C8.345 18.4481 9.17 18.5731 10.0138 18.5731C11.0128 18.5731 11.9706 18.4006 12.8625 18.0869C12.84 18.05 12.8184 18.0109 12.8013 17.9684L10.1503 10.75ZM17.5275 5.875C17.5647 6.15625 17.59 6.4375 17.59 6.75719C17.59 7.6275 17.4272 8.60594 16.9375 9.82969L14.3172 17.4053C16.8675 15.9184 18.5828 13.1553 18.5828 9.99031C18.5784 8.5 18.1875 7.09375 17.5312 5.88438L17.5275 5.875ZM10 0C4.48594 0 0 4.48594 0 10C0 15.5 4.5 20 10 20C15.5 20 20 15.5141 20 9.99969C20 4.5 15.5 0 10 0ZM10 19.5416C4.73906 19.5416 0.458438 15.2609 0.458438 9.99969C0.458438 4.75 4.75 0.46875 10 0.46875C15.25 0.46875 19.5419 4.75 19.5312 10.01C19.5416 15.25 15.25 19.5312 10 19.5416Z"
+                                fill="#0073AA"
+                              ></path>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="18"
+                              viewBox="0 0 20 18"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.73099 11.1527C3.73099 12.17 2.89999 13.001 1.88271 13.001C0.865455 13.001 0.0344238 12.17 0.0344238 11.1527C0.0344238 10.1355 0.865455 9.30444 1.88271 9.30444H3.73099V11.1527Z"
+                                fill="#E01E5A"
+                              ></path>
+                              <path
+                                d="M4.66223 11.1527C4.66223 10.1355 5.49326 9.30444 6.51051 9.30444C7.5278 9.30444 8.35879 10.1355 8.35879 11.1527V15.7806C8.35879 16.7979 7.5278 17.6289 6.51051 17.6289C5.49326 17.6289 4.66223 16.7979 4.66223 15.7806V11.1527Z"
+                                fill="#E01E5A"
+                              ></path>
+                              <path
+                                d="M6.51051 3.73099C5.49326 3.73099 4.66223 2.89999 4.66223 1.88271C4.66223 0.865455 5.49326 0.0344238 6.51051 0.0344238C7.5278 0.0344238 8.35879 0.865455 8.35879 1.88271V3.73099H6.51051Z"
+                                fill="#36C5F0"
+                              ></path>
+                              <path
+                                d="M6.51058 4.66211C7.52786 4.66211 8.35886 5.49314 8.35886 6.51039C8.35886 7.52768 7.52786 8.35867 6.51058 8.35867H1.88271C0.865455 8.35867 0.0344238 7.52768 0.0344238 6.51039C0.0344238 5.49314 0.865455 4.66211 1.88271 4.66211H6.51058Z"
+                                fill="#36C5F0"
+                              ></path>
+                              <path
+                                d="M13.9323 6.51039C13.9323 5.49314 14.7633 4.66211 15.7805 4.66211C16.7978 4.66211 17.6288 5.49314 17.6288 6.51039C17.6288 7.52768 16.7978 8.35867 15.7805 8.35867H13.9323V6.51039Z"
+                                fill="#2EB67D"
+                              ></path>
+                              <path
+                                d="M13.001 6.51058C13.001 7.52786 12.17 8.35886 11.1527 8.35886C10.1355 8.35886 9.30444 7.52786 9.30444 6.51058V1.88271C9.30444 0.865455 10.1355 0.0344238 11.1527 0.0344238C12.17 0.0344238 13.001 0.865455 13.001 1.88271V6.51058Z"
+                                fill="#2EB67D"
+                              ></path>
+                              <path
+                                d="M11.1527 13.9324C12.17 13.9324 13.001 14.7634 13.001 15.7807C13.001 16.7979 12.17 17.6289 11.1527 17.6289C10.1355 17.6289 9.30444 16.7979 9.30444 15.7807V13.9324H11.1527Z"
+                                fill="#ECB22E"
+                              ></path>
+                              <path
+                                d="M11.1527 13.001C10.1355 13.001 9.30444 12.17 9.30444 11.1527C9.30444 10.1355 10.1355 9.30444 11.1527 9.30444H15.7806C16.7979 9.30444 17.6289 10.1355 17.6289 11.1527C17.6289 12.17 16.7979 13.001 15.7806 13.001H11.1527Z"
+                                fill="#ECB22E"
+                              ></path>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M18.1908 0H1.80916C0.81 0 0 0.81 0 1.80916V18.1908C0 19.19 0.81 20 1.80916 20H18.1908C19.19 20 20 19.19 20 18.1908V1.80916C20 0.81 19.19 0 18.1908 0ZM6.18885 17.2693C6.18885 17.5601 5.95314 17.7958 5.66236 17.7958H3.4212C3.13042 17.7958 2.89471 17.5601 2.89471 17.2693V7.8745C2.89471 7.58372 3.13042 7.34801 3.4212 7.34801H5.66236C5.95314 7.34801 6.18885 7.58372 6.18885 7.8745V17.2693ZM4.54178 6.46241C3.36592 6.46241 2.41267 5.50916 2.41267 4.3333C2.41267 3.15743 3.36592 2.20419 4.54178 2.20419C5.71764 2.20419 6.67089 3.15743 6.67089 4.3333C6.67089 5.50916 5.7177 6.46241 4.54178 6.46241ZM17.901 17.3117C17.901 17.5791 17.6843 17.7958 17.417 17.7958H15.012C14.7447 17.7958 14.528 17.5791 14.528 17.3117V12.905C14.528 12.2476 14.7208 10.0243 12.81 10.0243C11.3279 10.0243 11.0272 11.5461 10.9669 12.2291V17.3117C10.9669 17.5791 10.7502 17.7958 10.4828 17.7958H8.15681C7.88948 17.7958 7.67272 17.5791 7.67272 17.3117V7.83209C7.67272 7.56476 7.88948 7.34801 8.15681 7.34801H10.4828C10.7501 7.34801 10.9669 7.56476 10.9669 7.83209V8.65173C11.5164 7.82696 12.3332 7.19037 14.0722 7.19037C17.9231 7.19037 17.901 10.7881 17.901 12.7648V17.3117Z"
+                                fill="#0077B7"
+                              ></path>
+                            </svg>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="packages__item-wrap">
+                          <img src="img/icons/insta.svg" alt="Instagram" />
+                          <span>Instagram accounts</span>
+                        </div>
+                        <span class="packages__item-available">
+                          10 аккаунтов</span
+                        >
+                      </li>
+                      <li>
+                        <div class="packages__item-wrap">
+                          <img src="img/icons/whatsapp.svg" alt="whatsapp" />
+                          <span>Whatsapp accounts</span>
+                        </div>
+                        <span class="packages__item-available">
+                          10 аккаунтов</span
+                        >
+                      </li>
+                      <li>
+                        <span>Более 1 фото в посте</span>
+                        <span class="packages__item-available">
+                          <img src="./img/icons/ok.svg" alt="ok" />
+                        </span>
+                      </li>
+                      <li>
+                        <span>Social Inbox</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Количество цикличных задач</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <ul class="mob-app-icon">
+                          <li>
+                            <img src="./img//icons/image 56.svg" alt="image" />
+                          </li>
+                          <li class="img_playmarket">
+                            <img
+                              src="./img/icons/playMarket.svg"
+                              alt="playmarket"
+                            />
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="packages__item">
+                    <ul class="packages__services">
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Services available</span>
+                        <ul class="packages__social">
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g>
+                                <path
+                                  d="M18.896 3.53445e-08H1.10306C0.493774 0.000305211 -0.000152553 0.494537 3.53445e-08 1.10397V18.8969C0.000305211 19.5062 0.494537 20.0002 1.10397 20H18.896C19.5056 20.0002 19.9998 19.5061 20 18.8965C20 18.8963 20 18.8962 20 18.896V1.10306C19.9997 0.493774 19.5055 -0.000152553 18.896 3.53445e-08Z"
+                                  fill="#4267B2"
+                                ></path>
+                                <path
+                                  d="M13.8086 20V12.2657H16.416L16.8066 9.23831H13.8086V7.31021C13.8086 6.43573 14.0514 5.83987 15.3053 5.83987H16.8945V3.13953C16.618 3.10275 15.6694 3.02051 14.5656 3.02051C12.2609 3.02051 10.6836 4.42676 10.6836 7.01038V9.23831H8.08594V12.2657H10.6836V20H13.8086Z"
+                                  fill="white"
+                                ></path>
+                              </g>
+                              <defs>
+                                <clipPath>
+                                  <rect
+                                    width="20"
+                                    height="20"
+                                    fill="white"
+                                  ></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g clip-path="url(#clip0)">
+                                <path
+                                  d="M10.0009 19.9998C15.5237 19.9998 20.0008 15.5227 20.0008 9.99991C20.0008 4.47711 15.5237 0 10.0009 0C4.47809 0 0.000976562 4.47711 0.000976562 9.99991C0.000976562 15.5227 4.47809 19.9998 10.0009 19.9998Z"
+                                  fill="#55ACEE"
+                                ></path>
+                                <path
+                                  d="M16.1254 7.18656C15.6969 7.37658 15.2359 7.50511 14.7525 7.56251C15.2461 7.26678 15.6249 6.79885 15.8037 6.24037C15.3418 6.51435 14.83 6.71311 14.2858 6.82024C13.8498 6.35588 13.2286 6.06567 12.5407 6.06567C11.2208 6.06567 10.1504 7.13611 10.1504 8.45593C10.1504 8.64328 10.1716 8.82564 10.2126 9.00069C8.22611 8.90104 6.46475 7.9495 5.28575 6.50294C5.08004 6.85589 4.96203 7.26678 4.96203 7.70476C4.96203 8.53383 5.38432 9.26576 6.02534 9.69429C5.63371 9.68199 5.26489 9.5745 4.94278 9.395C4.9426 9.40516 4.9426 9.41532 4.9426 9.4253C4.9426 10.5834 5.76687 11.5494 6.86012 11.7689C6.65976 11.8238 6.44817 11.8528 6.23052 11.8528C6.07614 11.8528 5.92659 11.838 5.78077 11.8102C6.08488 12.7596 6.96743 13.4507 8.01363 13.4702C7.19543 14.1113 6.16492 14.4934 5.04474 14.4934C4.85223 14.4934 4.66149 14.4821 4.47485 14.4598C5.5321 15.1383 6.78882 15.5338 8.13859 15.5338C12.5351 15.5338 14.9395 11.8917 14.9395 8.73277C14.9395 8.6292 14.9372 8.52599 14.9325 8.42367C15.3999 8.08676 15.8051 7.6659 16.1254 7.18656Z"
+                                  fill="#F1F2F2"
+                                ></path>
+                              </g>
+                              <defs>
+                                <clipPath>
+                                  <rect
+                                    width="20"
+                                    height="20"
+                                    fill="white"
+                                  ></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                                fill="#039BE5"
+                              ></path>
+                              <path
+                                d="M4.57581 9.78326L14.2175 6.06576C14.665 5.9041 15.0558 6.17493 14.9108 6.8516L14.9116 6.85076L13.27 14.5849C13.1483 15.1333 12.8225 15.2666 12.3666 15.0083L9.86664 13.1658L8.66081 14.3274C8.52748 14.4608 8.41498 14.5733 8.15664 14.5733L8.33414 12.0291L12.9675 7.84326C13.1691 7.66576 12.9225 7.56576 12.6566 7.74243L6.93081 11.3474L4.46247 10.5774C3.92664 10.4074 3.91497 10.0416 4.57581 9.78326Z"
+                                fill="white"
+                              ></path>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g>
+                                <path
+                                  d="M17.0703 18.7889H2.92969C1.96043 18.7889 1.17188 18.0003 1.17188 17.0311V8.51441C1.17188 8.32473 1.26371 8.14676 1.41832 8.03684L9.66051 2.17746C9.86379 2.03297 10.1362 2.03297 10.3395 2.17746L18.5817 8.03684C18.7363 8.14676 18.8282 8.32473 18.8282 8.51441V17.0311C18.8281 18.0003 18.0396 18.7889 17.0703 18.7889Z"
+                                  fill="#4175DF"
+                                ></path>
+                                <path
+                                  d="M17.0703 18.7889C18.0396 18.7889 18.8281 18.0003 18.8281 17.0311V8.5144C18.8281 8.32472 18.7363 8.14675 18.5817 8.03683L10.3395 2.17745C10.2379 2.10519 10.1189 2.06909 10 2.06909V18.7889H17.0703Z"
+                                  fill="#4254B6"
+                                ></path>
+                                <path
+                                  d="M4.97926 6.92676C4.97926 8.30039 3.86473 9.41375 2.48965 9.41375C1.11457 9.41375 0 8.30039 0 6.92676H4.97926Z"
+                                  fill="#4086F4"
+                                ></path>
+                                <path
+                                  d="M9.99999 6.92676C9.99999 8.30039 8.84398 9.41375 7.46886 9.41375C6.09374 9.41375 4.97925 8.30043 4.97925 6.92676H9.99999Z"
+                                  fill="#324492"
+                                ></path>
+                                <path
+                                  d="M20 6.92684H15.0208L13.7345 1.21094H16.7411C17.2125 1.21094 17.6436 1.47703 17.8544 1.89816L20 6.92684Z"
+                                  fill="#4254B6"
+                                ></path>
+                                <path
+                                  d="M15.0207 6.92684H10V1.21094H13.7345L15.0207 6.92684Z"
+                                  fill="#4086F4"
+                                ></path>
+                                <path
+                                  d="M9.99999 1.21094V6.92684H4.97925L6.22405 1.21094H9.99999Z"
+                                  fill="#4254B6"
+                                ></path>
+                                <path
+                                  d="M6.22406 1.21094L4.97926 6.92684H0L2.14563 1.8982C2.35641 1.47707 2.78754 1.21098 3.25891 1.21098H6.22406V1.21094Z"
+                                  fill="#80AEF8"
+                                ></path>
+                                <path
+                                  d="M15.0207 6.92676C15.0207 8.30039 13.9062 9.41375 12.5311 9.41375C11.1561 9.41375 10 8.30039 10 6.92676H15.0207Z"
+                                  fill="#4175DF"
+                                ></path>
+                                <path
+                                  d="M20 6.92676C20 8.30039 18.8854 9.41375 17.5104 9.41375C16.1353 9.41375 15.0208 8.30043 15.0208 6.92676H20Z"
+                                  fill="#324492"
+                                ></path>
+                                <path
+                                  d="M15.8594 12.9294H14.1016C13.778 12.9294 13.5156 13.1917 13.5156 13.5153C13.5156 13.8389 13.778 14.1013 14.1016 14.1013H15.1727C14.9308 14.7832 14.2795 15.2732 13.5156 15.2732C12.5464 15.2732 11.7578 14.4846 11.7578 13.5153C11.7578 12.5461 12.5464 11.7575 13.5156 11.7575C13.9852 11.7575 14.4266 11.9404 14.7586 12.2724C14.9874 12.5012 15.3584 12.5012 15.5872 12.2724C15.8161 12.0436 15.816 11.6726 15.5872 11.4438C15.0339 10.8904 14.2982 10.5857 13.5156 10.5857C11.9002 10.5857 10.5859 11.9 10.5859 13.5154C10.5859 15.1308 11.9002 16.4451 13.5156 16.4451C15.1311 16.4451 16.4453 15.1308 16.4453 13.5154C16.4453 13.1917 16.183 12.9294 15.8594 12.9294Z"
+                                  fill="#E3E7EA"
+                                ></path>
+                              </g>
+                              <defs>
+                                <clipPath>
+                                  <rect
+                                    width="20"
+                                    height="20"
+                                    fill="white"
+                                  ></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1.42125 9.99969C1.42125 13.4059 3.39 16.3434 6.265 17.7203L2.16406 6.50844C1.68813 7.5625 1.40625 8.75 1.40625 9.99969H1.42125ZM15.7909 9.56688C15.7909 8.50625 15.41 7.7725 15.0834 7.20125C14.6487 6.49406 14.2412 5.89594 14.2412 5.18906C14.2412 4.40062 14.8387 3.66656 15.6816 3.66656C15.7194 3.66656 15.7441 3.66656 15.8066 3.67344C14.2666 2.28125 12.2188 1.40625 10 1.42125C7.00281 1.42125 4.36656 2.95906 2.8325 5.29625C3.03406 5.29625 3.23875 5.29625 3.395 5.30656C4.29219 5.30656 5.68125 5.1975 5.68125 5.1975C6.14344 5.17063 6.2125 5.85375 5.74375 5.91625C5.74375 5.91625 5.27906 5.97063 4.76188 5.99781L7.88594 15.29L9.76344 9.65969L8.42719 5.99781C7.965 5.97063 7.5275 5.91625 7.5275 5.91625C7.065 5.88906 7.11937 5.18219 7.58187 5.20937C7.58187 5.20937 8.98812 5.30312 9.83187 5.31844C10.7288 5.31844 12.1184 5.20937 12.1184 5.20937C12.5806 5.1825 12.6497 5.86562 12.1809 5.91625C12.1809 5.91625 11.7156 5.97063 11.1991 5.99781L14.2991 15.2191L15.155 12.3603C15.5087 11.1562 15.7812 10.3125 15.7812 9.56688H15.7909ZM10.1503 10.75L7.57625 18.2294C8.345 18.4481 9.17 18.5731 10.0138 18.5731C11.0128 18.5731 11.9706 18.4006 12.8625 18.0869C12.84 18.05 12.8184 18.0109 12.8013 17.9684L10.1503 10.75ZM17.5275 5.875C17.5647 6.15625 17.59 6.4375 17.59 6.75719C17.59 7.6275 17.4272 8.60594 16.9375 9.82969L14.3172 17.4053C16.8675 15.9184 18.5828 13.1553 18.5828 9.99031C18.5784 8.5 18.1875 7.09375 17.5312 5.88438L17.5275 5.875ZM10 0C4.48594 0 0 4.48594 0 10C0 15.5 4.5 20 10 20C15.5 20 20 15.5141 20 9.99969C20 4.5 15.5 0 10 0ZM10 19.5416C4.73906 19.5416 0.458438 15.2609 0.458438 9.99969C0.458438 4.75 4.75 0.46875 10 0.46875C15.25 0.46875 19.5419 4.75 19.5312 10.01C19.5416 15.25 15.25 19.5312 10 19.5416Z"
+                                fill="#0073AA"
+                              ></path>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="18"
+                              viewBox="0 0 20 18"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.73099 11.1527C3.73099 12.17 2.89999 13.001 1.88271 13.001C0.865455 13.001 0.0344238 12.17 0.0344238 11.1527C0.0344238 10.1355 0.865455 9.30444 1.88271 9.30444H3.73099V11.1527Z"
+                                fill="#E01E5A"
+                              ></path>
+                              <path
+                                d="M4.66223 11.1527C4.66223 10.1355 5.49326 9.30444 6.51051 9.30444C7.5278 9.30444 8.35879 10.1355 8.35879 11.1527V15.7806C8.35879 16.7979 7.5278 17.6289 6.51051 17.6289C5.49326 17.6289 4.66223 16.7979 4.66223 15.7806V11.1527Z"
+                                fill="#E01E5A"
+                              ></path>
+                              <path
+                                d="M6.51051 3.73099C5.49326 3.73099 4.66223 2.89999 4.66223 1.88271C4.66223 0.865455 5.49326 0.0344238 6.51051 0.0344238C7.5278 0.0344238 8.35879 0.865455 8.35879 1.88271V3.73099H6.51051Z"
+                                fill="#36C5F0"
+                              ></path>
+                              <path
+                                d="M6.51058 4.66211C7.52786 4.66211 8.35886 5.49314 8.35886 6.51039C8.35886 7.52768 7.52786 8.35867 6.51058 8.35867H1.88271C0.865455 8.35867 0.0344238 7.52768 0.0344238 6.51039C0.0344238 5.49314 0.865455 4.66211 1.88271 4.66211H6.51058Z"
+                                fill="#36C5F0"
+                              ></path>
+                              <path
+                                d="M13.9323 6.51039C13.9323 5.49314 14.7633 4.66211 15.7805 4.66211C16.7978 4.66211 17.6288 5.49314 17.6288 6.51039C17.6288 7.52768 16.7978 8.35867 15.7805 8.35867H13.9323V6.51039Z"
+                                fill="#2EB67D"
+                              ></path>
+                              <path
+                                d="M13.001 6.51058C13.001 7.52786 12.17 8.35886 11.1527 8.35886C10.1355 8.35886 9.30444 7.52786 9.30444 6.51058V1.88271C9.30444 0.865455 10.1355 0.0344238 11.1527 0.0344238C12.17 0.0344238 13.001 0.865455 13.001 1.88271V6.51058Z"
+                                fill="#2EB67D"
+                              ></path>
+                              <path
+                                d="M11.1527 13.9324C12.17 13.9324 13.001 14.7634 13.001 15.7807C13.001 16.7979 12.17 17.6289 11.1527 17.6289C10.1355 17.6289 9.30444 16.7979 9.30444 15.7807V13.9324H11.1527Z"
+                                fill="#ECB22E"
+                              ></path>
+                              <path
+                                d="M11.1527 13.001C10.1355 13.001 9.30444 12.17 9.30444 11.1527C9.30444 10.1355 10.1355 9.30444 11.1527 9.30444H15.7806C16.7979 9.30444 17.6289 10.1355 17.6289 11.1527C17.6289 12.17 16.7979 13.001 15.7806 13.001H11.1527Z"
+                                fill="#ECB22E"
+                              ></path>
+                            </svg>
+                          </li>
+                          <li>
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M18.1908 0H1.80916C0.81 0 0 0.81 0 1.80916V18.1908C0 19.19 0.81 20 1.80916 20H18.1908C19.19 20 20 19.19 20 18.1908V1.80916C20 0.81 19.19 0 18.1908 0ZM6.18885 17.2693C6.18885 17.5601 5.95314 17.7958 5.66236 17.7958H3.4212C3.13042 17.7958 2.89471 17.5601 2.89471 17.2693V7.8745C2.89471 7.58372 3.13042 7.34801 3.4212 7.34801H5.66236C5.95314 7.34801 6.18885 7.58372 6.18885 7.8745V17.2693ZM4.54178 6.46241C3.36592 6.46241 2.41267 5.50916 2.41267 4.3333C2.41267 3.15743 3.36592 2.20419 4.54178 2.20419C5.71764 2.20419 6.67089 3.15743 6.67089 4.3333C6.67089 5.50916 5.7177 6.46241 4.54178 6.46241ZM17.901 17.3117C17.901 17.5791 17.6843 17.7958 17.417 17.7958H15.012C14.7447 17.7958 14.528 17.5791 14.528 17.3117V12.905C14.528 12.2476 14.7208 10.0243 12.81 10.0243C11.3279 10.0243 11.0272 11.5461 10.9669 12.2291V17.3117C10.9669 17.5791 10.7502 17.7958 10.4828 17.7958H8.15681C7.88948 17.7958 7.67272 17.5791 7.67272 17.3117V7.83209C7.67272 7.56476 7.88948 7.34801 8.15681 7.34801H10.4828C10.7501 7.34801 10.9669 7.56476 10.9669 7.83209V8.65173C11.5164 7.82696 12.3332 7.19037 14.0722 7.19037C17.9231 7.19037 17.901 10.7881 17.901 12.7648V17.3117Z"
+                                fill="#0077B7"
+                              ></path>
+                            </svg>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="packages__item-wrap">
+                          <img src="img/icons/insta.svg" alt="Instagram" />
+                          <span>Instagram account</span>
+                        </div>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Whatsapp account</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Более 1 фото в посте</span>
+                        <span class="packages__item-available">
+                          <img src="./img/icons/ok.svg" alt="ok" />
+                        </span>
+                      </li>
+                      <li>
+                        <span>Social Inbox</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Период планирования</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <span>Количество цикличных задач</span>
+                        <span class="packages__item-available">
+                          Неограниченно
+                        </span>
+                      </li>
+                      <li>
+                        <ul class="mob-app-icon">
+                          <li>
+                            <img src="./img//icons/image 56.svg" alt="image" />
+                          </li>
+                          <li class="img_playmarket">
+                            <img
+                              src="./img/icons/playMarket.svg"
+                              alt="playmarket"
+                            />
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="package__table">
+                  <table class="table">
+                    <thead class="table__head">
+                      <tr>
+                        <th>Функции</th>
+                        <th>Владелец</th>
+                        <th>Менеджер</th>
+                        <th>Гость</th>
+                        <th>Владелец</th>
+                        <th>Менеджер</th>
+                        <th>Гость</th>
+                        <th>Владелец</th>
+                        <th>Менеджер</th>
+                        <th>Гость</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table__body">
+                      <tr>
+                        <td>Утверждение контента</td>
+                        <td>
+                          <img src="./img/icons/ok2.svg" alt="ok" />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img src="./img/icons/ok2.svg" alt="ok" />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img src="./img/icons/ok2.svg" alt="ok" />
+                        </td>
+                        <td>
+                          <img src="./img/icons/ok2.svg" alt="ok" />
+                        </td>
+                        <td>
+                          <img src="./img/icons/ok2.svg" alt="ok" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Просмотр запланированного<br />
+                          контента
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Планирование, редактирование и<br />
+                          публикация контента
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Редактирование контента других<br />
+                          участников
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                      </tr>
+                      <tr>
+                        <td>Доступ к Social Inbox</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                      </tr>
+                      <tr>
+                        <td>Доступ к статистике публикаций</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Доступ к автоматической<br />
+                          генерации контента (RSS)
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                      </tr>
+                      <tr>
+                        <td>Добавление аккаунтов</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                      </tr>
+                      <tr>
+                        <td>Переподключение аккаунтов</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                      </tr>
+                      <tr>
+                        <td>Изменение проектов</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Создание новых участников<br />
+                          проекта
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Изменение прав участников<br />
+                          проекта
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Деактивация участников проекта</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Удаление участников проекта</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Покупка тарифа</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Удаление аккаунтов</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Удаление контента</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Создание проектов</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Удаление проектов</td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Перемещение аккаунтов между<br />
+                          проектами
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td><img src="./img/icons/ok2.svg" alt="ok" /></td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                        <td>
+                          <img
+                            src="./img/icons/Rectangle 2.1.svg"
+                            alt="cansel"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="3" >
+                          <div class="tarifs__price__free">
+                            <div class="free__first">
+                              <img src="./img/icons/free.svg" alt="free" />
+                              <span>free</span>
+                            </div>
+                            <div class="free__second">
+                              <span>0 USD</span>
+                              <span>Без ограничений<br> по времени использования</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td colspan="3">
+                          <div class="tarifs__price__pro">
+                            <div class="free__first">
+                              <img src="./img/icons/pro.svg" alt="pro" />
+                              <span>pro</span>
+                            </div>
+                            <div class="pro__second">
+                              <div class="tarifs-price__list">
+                                <ul>
+                                  <li>30 дней</li>
+                                  <li>90 дней</li>
+                                  <li>179 дней</li>
+                                </ul>
+                                <ul>
+                                  <li>19 usd</li>
+                                  <li>49 usd</li>
+                                  <li>179 usd</li>
+                                </ul>
+                            </div>
+                          </div>
+                        </td>
+                        <td colspan="3">
+                           <div class="tarifs__price__team">
+                            <div class="free__first">
+                              <img src="./img/icons/team.svg" alt="team" />
+                              <span>team</span>
+                            </div>
+                            <div class="team__second">
+                             <div class="tarifs-price__list">
+                                <ul>
+                                  <li>30 дней</li>
+                                  <li>90 дней</li>
+                                  <li>365 дней</li>
+                                </ul>
+                                <ul>
+                                  <li>399 usd</li>
+                                  <li>1099 usd</li>
+                                  <li>3999 usd</li>
+                                </ul>
+                              </div>
+                            </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button class="packages__more packages__more--mob">
+                  See more
+                </button>
+                <button class="packages__more">
+                  Показать подробную информацию по возможностям
+                </button>
+                <a href="#" class="packages__btn main-btn main-btn--pink"
+                  ><span>Sign up free</span></a
+                >
+                <p class="packages__note">
+                  Несмотря на то, что вы выбираете регистрация единая и она
+                  бесплатная.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-lg-3 col-12">
+            <a href="#" class="page-footer__logo logo">
+              <img src="img/logo.svg" alt="Postoplan" width="200" />
+            </a>
+            <ul class="page-footer__list">
+              <li>
+                <a href="#">Сделка пожизненного действия</a>
+              </li>
+              <li>
+                <a href="#"> Условия использования</a>
+              </li>
+              <li>
+                <a href="#">Политика конфиденциальности</a>
+              </li>
+              <li>
+                <a href="#">Карта сайта</a>
+              </li>
+              <li>
+                <a href="#">Партнерская программа</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 col-12 d-flex flex-wrap justify-content-between">
+            <div class="page-footer__item">
+              <h3 class="page-footer__sub">О компании</h3>
+              <ul class="page-footer__sublist">
+                <li>
+                  <a href="#"><span>О нас</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Цены</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Пресс-кит</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Обновления</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Блог</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Отзывы</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>FAQ</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Контакты</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__item">
+              <h3 class="page-footer__sub">Отложенная публикация в</h3>
+              <ul class="page-footer__sublist">
+                <li>
+                  <a href="#"><span>Facebook</span></a>
+                </li>
+                <li>
+                  <a href="#"> <span>Twitter</span></a>
+                </li>
+                <li>
+                  <a href="#"> <span>LinkedIn</span></a>
+                </li>
+                <li>
+                  <a href="#"> <span>Instagram</span></a>
+                </li>
+                <li>
+                  <a href="#"> <span>Slack</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Telegram</span></a>
+                </li>
+                <li>
+                  <a href="#"> <span>WhatsApp</span></a>
+                </li>
+                <li>
+                  <a href="#"> <span>Odnoklassniki</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Vkontakte</span></a>
+                </li>
+                <li>
+                  <a href="#"> <span>Google My Business</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__item">
+              <h3 class="page-footer__sub">Сравните</h3>
+              <ul class="page-footer__sublist">
+                <li>
+                  <a href="#"><span>Альтернатива Hootsuite</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Альтернатива Buffer</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Альтернатива AgoraPulse</span></a>
+                </li>
+                <li>
+                  <a href="#"><span> Альтернатива SproutSocial</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row no-gutters page-footer__bottom d-flex align-items-center"
+        >
+          <div class="col-12 col-xl-3 col-sm-6">
+            <p class="copyright">©POSTOPLAN 2021. Все права защищены</p>
+          </div>
+          <div
+            class="col-12 col-lg-3 col-sm-5 ml-auto d-flex justify-content-end"
+          >
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownfooter"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span>EN</span>
+              </button>
+              <div
+                class="dropdown-menu dropup dropdown-menu-left"
+                role="menu"
+                aria-labelledby="dropdownfooter"
+              >
+                <a class="dropdown-item" href="#">EN</a>
+                <a class="dropdown-item" href="#">RU</a>
+              </div>
+            </div>
+            <ul class="social">
+              <li>
+                <a href="#">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.0001 0C6.71586 0 0 6.74393 0 15.0628C0 22.5239 5.40783 28.7029 12.4984 29.8994V18.2053H8.87992V13.9971H12.4984V10.8941C12.4984 7.29377 14.6882 5.33179 17.8871 5.33179C19.4191 5.33179 20.7357 5.44643 21.1179 5.49692V9.26024L18.8993 9.26132C17.16 9.26132 16.8247 10.0911 16.8247 11.3092V13.9949H20.9748L20.4335 18.2032H16.8247V30C24.2463 29.093 30 22.7565 30 15.0585C30 6.74393 23.2841 0 15.0001 0Z"
+                      fill="#3E89F4"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M29.9098 8.81561C29.8368 7.21893 29.5832 6.12854 29.2124 5.17456C28.8359 4.17366 28.2454 3.26706 27.4823 2.5177C26.7332 1.75461 25.8263 1.16386 24.8254 0.787125C23.8712 0.416565 22.7811 0.163193 21.1844 0.0906372C19.5847 0.017395 19.0736 0 15 0C10.9264 0 10.4153 0.017395 8.81561 0.0901794C7.21893 0.163193 6.12877 0.416794 5.17456 0.787582C4.17366 1.16409 3.26706 1.75461 2.5177 2.5177C1.75461 3.26683 1.16386 4.17343 0.787125 5.17433C0.416565 6.12854 0.163193 7.21893 0.0906372 8.81538C0.017395 10.4153 0 10.9261 0 14.9998C0 19.0736 0.017395 19.5847 0.0906372 21.1844C0.163422 22.7808 0.417023 23.8712 0.787811 24.8254C1.16432 25.8261 1.75484 26.7329 2.51793 27.4821C3.26706 28.2452 4.17389 28.8357 5.17479 29.2122C6.12877 29.5832 7.21916 29.8366 8.81584 29.9096C10.4157 29.9826 10.9266 29.9998 15.0002 29.9998C19.0739 29.9998 19.585 29.9826 21.1846 29.9096C22.7813 29.8366 23.8715 29.5832 24.8257 29.2122C26.8405 28.4331 28.4333 26.8403 29.2124 24.8254C29.5834 23.8712 29.8368 22.7808 29.9098 21.1844C29.9826 19.5845 30 19.0736 30 15C30 10.9261 29.9826 10.4153 29.9098 8.81561ZM27.2097 21.0615C27.1431 22.524 26.8987 23.3183 26.6933 23.8467C26.1887 25.155 25.1548 26.1889 23.8465 26.6936C23.318 26.8989 22.5238 27.1433 21.0612 27.2099C19.4799 27.2823 19.0054 27.2974 15 27.2974C10.9943 27.2974 10.5201 27.2823 8.93852 27.2099C7.4762 27.1433 6.68198 26.8989 6.15326 26.6936C5.50186 26.453 4.91249 26.0696 4.42863 25.5714C3.93036 25.0875 3.54698 24.4984 3.30643 23.8467C3.10112 23.3183 2.85667 22.524 2.79007 21.0615C2.71797 19.4799 2.70264 19.0054 2.70264 15.0002C2.70264 10.9948 2.71797 10.5206 2.79007 8.93875C2.8569 7.4762 3.10112 6.68198 3.30643 6.15349C3.54698 5.50186 3.93059 4.91249 4.42863 4.42863C4.91249 3.93036 5.50186 3.54698 6.15349 3.30666C6.68198 3.10112 7.4762 2.8569 8.93875 2.79007C10.5203 2.71797 10.9948 2.70264 15 2.70264C19.005 2.70264 19.4795 2.71797 21.0612 2.7903C22.5238 2.8569 23.3178 3.10135 23.8465 3.30666C24.4979 3.54721 25.0873 3.93059 25.5711 4.42863C26.0694 4.91249 26.4528 5.50186 26.6931 6.15349C26.8987 6.68198 27.1431 7.4762 27.2097 8.93875C27.2818 10.5203 27.2971 10.9948 27.2971 15C27.2971 19.0054 27.282 19.4797 27.2097 21.0615ZM14.9998 7.2971C10.7458 7.2971 7.29725 10.7459 7.29725 14.9999C7.29725 19.2539 10.7458 22.7024 14.9998 22.7024C19.254 22.7024 22.7026 19.2539 22.7026 14.9999C22.7026 10.7459 19.254 7.2971 14.9998 7.2971ZM14.9998 19.9998C12.2386 19.9996 9.99989 17.7611 10.0001 14.9997C10.0001 12.2384 12.2386 9.99973 15 9.99973C17.7615 9.99996 20 12.2384 20 14.9997C20 17.7611 17.7613 19.9998 14.9998 19.9998ZM23.0071 8.79291C24.0011 8.79291 24.807 7.98702 24.807 6.99299C24.807 5.99872 24.0011 5.19283 23.0071 5.19283C22.0128 5.19283 21.207 5.99872 21.207 6.99299C21.207 7.98702 22.0128 8.79291 23.0071 8.79291Z"
+                      fill="#3E89F4"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 14.8323C0 6.91708 6.71575 0.500488 15 0.500488C23.2843 0.500488 30 6.91708 30 14.8323C30 22.7475 23.2843 29.1641 15 29.1641C6.71575 29.1641 0 22.7475 0 14.8323ZM10.6003 12.3707H7.201V22.1294H10.6003V12.3707ZM10.8243 9.352C10.8022 8.39517 10.0861 7.6664 8.92313 7.6664C7.76025 7.6664 7 8.39517 7 9.352C7 10.289 7.73781 11.0387 8.879 11.0387H8.90075C10.0861 11.0387 10.8243 10.289 10.8243 9.352ZM22.8596 16.534C22.8596 13.5367 21.1826 12.1416 18.9457 12.1416C17.1409 12.1416 16.3328 13.0887 15.8817 13.7532V12.371H12.4819C12.5267 13.2867 12.4819 22.1296 12.4819 22.1296H15.8817V16.6796C15.8817 16.3879 15.9037 16.097 15.9936 15.8882C16.2393 15.3055 16.7987 14.7022 17.7378 14.7022C18.9684 14.7022 19.4603 15.5971 19.4603 16.9084V22.1294H22.8595L22.8596 16.534Z"
+                      fill="#3E89F4"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    width="30"
+                    height="25"
+                    viewBox="0 0 30 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.43474 24.1302C20.7561 24.1302 26.9472 14.8474 26.9472 6.79804C26.9472 6.53436 26.9417 6.27182 26.9298 6.01064C28.1314 5.15074 29.176 4.07769 30 2.85626C28.8972 3.34148 27.7103 3.66791 26.4654 3.81537C27.7361 3.06104 28.7119 1.86816 29.1719 0.446029C27.9826 1.14373 26.6656 1.65069 25.2635 1.92456C24.1404 0.740513 22.5412 0 20.7706 0C17.3717 0 14.6152 2.72805 14.6152 6.09083C14.6152 6.56902 14.6693 7.03385 14.7748 7.47988C9.65927 7.22504 5.12306 4.80121 2.08763 1.11519C1.55914 2.0154 1.25427 3.06127 1.25427 4.17714C1.25427 6.2904 2.341 8.15629 3.9933 9.24769C2.98347 9.21688 2.03499 8.94256 1.20575 8.48588C1.20483 8.51148 1.20483 8.5364 1.20483 8.56358C1.20483 11.5139 3.32634 13.9771 6.14296 14.5353C5.62569 14.6746 5.08141 14.7495 4.51996 14.7495C4.12399 14.7495 3.7381 14.711 3.36296 14.6397C4.14665 17.0601 6.41899 18.8214 9.11293 18.8707C7.0063 20.5049 4.35242 21.4783 1.46828 21.4783C0.972061 21.4783 0.481796 21.4502 0 21.394C2.72392 23.1219 5.95871 24.1304 9.43497 24.1304"
+                      fill="#3E89F4"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/picturefill.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
